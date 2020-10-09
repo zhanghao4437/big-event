@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/01/assets/lib/layui/css/layui.css">
+    <!-- 引入自己的样式表 -->
+    <link rel="stylesheet" href="/01/assets/css/user/user_info.css">
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">卡片面板</div>
+        <div class="layui-card-body">
+            <!-- 表单区域 -->
+            <form class="layui-form" lay-filter="formUserInfo">
+                <!-- 添加隐藏域，保存id 取值赋值 -->
+                <input type="hidden" name="id" value="">
+                <!-- 用户名 -->
+                <div class="layui-form-item">
+                    <label class="layui-form-label">用户名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
+                            autocomplete="off" class="layui-input" readonly>
+                    </div>
+                </div>
+                <!-- 昵称 -->
+                <div class="layui-form-item">
+                    <label class="layui-form-label">昵称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="nickname" required lay-verify="required|nickname" placeholder="请输入昵称"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <!-- 邮箱 -->
+                <div class="layui-form-item">
+                    <label class="layui-form-label">邮箱</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="email" required lay-verify="required|email" placeholder="请输入邮箱"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                        <button id="btnReset" type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="/01/assets/lib/layui/layui.all.js"></script>
+    <script src="/01/assets/lib/jquery.js"></script>
+    <script src="/01/assets/js/bassAPI.js"></script>
+    <script src="/01/assets/js/user/user_info.js"></script>
+</body>
+
+</html>
