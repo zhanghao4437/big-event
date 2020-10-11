@@ -26,7 +26,7 @@ $(function () {
             method: 'POST',
             url: '/my/updatepwd',
             data: $(this).serialize(),
-            sunccess: function (res) {
+            success: function (res) {
                 // 判断状态码
                 if (res.status !== 0) {
                     return layui.layer.msg(res.message)
